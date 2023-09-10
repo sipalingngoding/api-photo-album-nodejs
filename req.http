@@ -1,0 +1,86 @@
+POST http://localhost:8000/users/register
+Content-Type: application/json
+
+{
+  "email" : "sinaga@gmail.com",
+  "password" : "Diory123?",
+  "full_name" : "Diory Pribadi Sinaga",
+  "age" : "22",
+  "address" : "Bandung",
+  "phone_number": "834343"
+}
+
+###
+POST http://localhost:8000/users/login
+Content-Type: application/json
+
+{
+  "email": "budiman@gmail.com",
+  "password" : "password2"
+}
+
+###
+GET http://localhost:8000/photos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
+
+
+###
+GET http://localhost:8000/photos/4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
+
+###
+POST http://localhost:8000/photos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
+Content-Type: application/json
+
+{
+  "title" : "Photo diory 2",
+  "caption" :"Sudah kerja",
+  "image" : "https://avatars.githubusercontent.com/u/92094174?v=4"
+}
+
+###
+PUT http://localhost:8000/photos/4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
+Content-Type: application/json
+
+{
+  "caption" :"Sudah kerja di Bank BCA"
+}
+
+###
+DELETE http://localhost:8000/photos/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
+
+
+###
+GET http://localhost:8000/comments
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY5NDM3OTg3MywiZXhwIjoxNjk0MzgzNDczfQ.4JV7TYzSMhqB7s6zX15ZZ3241oTtORQglKMlvoC_HvU
+
+###
+GET http://localhost:8000/comments/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY5NDM3OTg3MywiZXhwIjoxNjk0MzgzNDczfQ.4JV7TYzSMhqB7s6zX15ZZ3241oTtORQglKMlvoC_HvU
+
+###
+POST http://localhost:8000/comments
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY5NDM3OTg3MywiZXhwIjoxNjk0MzgzNDczfQ.4JV7TYzSMhqB7s6zX15ZZ3241oTtORQglKMlvoC_HvU
+Content-Type: application/json
+
+{
+  "comment": "Comment photo diory kerja di BCA",
+  "photoId" : 4
+}
+
+###
+PUT http://localhost:8000/comments/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY5NDM3OTg3MywiZXhwIjoxNjk0MzgzNDczfQ.4JV7TYzSMhqB7s6zX15ZZ3241oTtORQglKMlvoC_HvU
+Content-Type: application/json
+
+{
+  "comment": "Comment kerja diory"
+}
+
+
+###
+DELETE http://localhost:8000/comments/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5NDM3OTA5NSwiZXhwIjoxNjk0MzgyNjk1fQ.iKMRLP3W3bACNsXtj8X8Favm6iTYFZhpvD_okpDISTI
